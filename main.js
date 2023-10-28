@@ -11,9 +11,9 @@ const updateDetails = (url, title, author) => {
   memeAuthor.innerHTML = `Meme By: ${author}`;
 };
 
-const generateType = "funnycars";
+
 const generateMeme = () => {
-  fetch("https://meme-api.com/gimme/${generateType}")
+  fetch("https://meme-api.com/gimme/funnycars") //edit this URL for different memes
     .then((response) => response.json())
     .then((data) => {
       updateDetails(data.url, data.title, data.author);
